@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-
-createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
     * {
         margin: 0;
         padding: 0;
@@ -10,9 +9,10 @@ createGlobalStyle`
     }
 
     body {
-        background-color: #9b65e5;
+        background-color: #f8bbd0;
         text-rendering: optimizeLegibility !important;
         -webkit-font-smoothing: antialiased;
+        font-family: sans-serif;
 
     }
 `;

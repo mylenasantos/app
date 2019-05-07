@@ -1,12 +1,16 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 //import styled from 'styled-components';
 
 export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 60px;
+    .logo {
+        width: 100%;
+        max-width: 300px;
+    }
 `;
 
 export const Form = styled.form`
@@ -14,10 +18,6 @@ export const Form = styled.form`
     width: 100%;
     max-width: 400px;
     display: flex;
-
-    .logo {
-        width: 100px;
-    }
 
     input {
         flex: 1;
@@ -28,7 +28,6 @@ export const Form = styled.form`
         font-size: 18px;
         color: #444;
         border-radius: 3px;
-
     }
 
     button {
@@ -45,10 +44,5 @@ export const Form = styled.form`
         &:hover {
             background: #ef9a9a;
         }
-
     }
-
-
-
-
 `;

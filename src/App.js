@@ -1,13 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-import Main from './pages/main';
+import React, { Fragment } from "react";
+import Main from "./pages/main";
 
-import './assets/global';
-
-
+import { GlobalStyle } from "./assets/global";
 
 const App = () => (
-    <Main/>
+    <Fragment>
+        <Main />
+        <GlobalStyle />
+    </Fragment>
 );
 
 export default App;
