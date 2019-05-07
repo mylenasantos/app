@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import "font-awesome/css/font-awesome.css";
 
 export const GlobalStyle = createGlobalStyle`
     * {
@@ -13,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
         text-rendering: optimizeLegibility !important;
         -webkit-font-smoothing: antialiased;
         font-family: sans-serif;
+
 
     }
 `;
