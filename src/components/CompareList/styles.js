@@ -1,11 +1,20 @@
 import styled from "styled-components";
+import { screen } from "../../assets/variables";
 
 export const Container = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    padding-top: 60px;
 
-    margin-top: 50px;
+    margin-top: 10px;
+
+    @media (min-width: 900px) {
+        /* para 900px em diante */
+        flex-direction: row;
+        align-items: center;
+        padding-top: 60px;
+    }
 `;
 
 export const Repository = styled.div`
@@ -13,7 +22,7 @@ export const Repository = styled.div`
     background: #fff;
     border-radius: 3px;
     flex-direction: column;
-    margin: 0 10px;
+    margin: 10px 10px;
 
     header {
         padding: 30px;
