@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { screen } from "../../assets/variables";
 
 export const Container = styled.div`
     display: flex;
