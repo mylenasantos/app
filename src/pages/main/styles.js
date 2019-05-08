@@ -31,13 +31,23 @@ export const Form = styled.form`
         border: ${props => (props.withError ? "2px solid #f00" : 0)};
     }
 
+    p {
+        color: #e75b5b;
+        position: absolute;
+
+        font-size: 14px;
+        margin-top: 60px;
+        position: center;
+        margin-left: 130px;
+    }
+
     button {
         width: 80px;
         height: 55px;
         padding: 0 20px;
         margin-left: 10px;
-        background: #ef5350;
-        color: #fff;
+        background: #e8eaf6;
+        color: #000;
         border: 0;
         font-size: 20px;
         font-weight: bold;

@@ -13,7 +13,11 @@ export default class Main extends Component {
         loading: false,
         repositoryError: false,
         repositoryInput: "",
-        repositories: []
+        repositories: [],
+        msgError: {
+            msg: "",
+            show: false
+        }
     };
 
     handleAddRepository = async e => {
@@ -34,14 +38,20 @@ export default class Main extends Component {
                 repositoryError: false
             });
         } catch (err) {
-            this.setState({
-                repositoryError: true
-            });
+            this.setState(prevState => ({
+                repositoryError: true,
+                msgError: {
+                    ...prevState.msgError,
+                    show: true,
+                    msg: "Not Found"
+                }
+            }));
         } finally {
             this.setState({ loading: false });
         }
     };
     render() {
+        const { msgError } = this.state;
         return (
             <Container>
                 <img src={logo} alt="GithubCompare" className="logo" />
@@ -53,6 +63,7 @@ export default class Main extends Component {
                     <input
                         type="text"
                         placeholder="Search"
+                        error={msgError.show}
                         value={this.state.repositoryInput}
                         onChange={e =>
                             this.setState({ repositoryInput: e.target.value })
@@ -66,6 +77,8 @@ export default class Main extends Component {
                             "OK"
                         )}
                     </button>
+
+                    <p>{msgError.msg}</p>
                 </Form>
                 <CompareList repositories={this.state.repositories} />
             </Container>
