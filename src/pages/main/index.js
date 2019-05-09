@@ -35,7 +35,9 @@ export default class Main extends Component {
             this.setState({
                 repositoryInput: "",
                 repositories: [...this.state.repositories, repository],
-                repositoryError: false
+                repositoryError: false,
+                show: false,
+                msg: ""
             });
         } catch (err) {
             this.setState(prevState => ({
@@ -66,7 +68,13 @@ export default class Main extends Component {
                         error={msgError.show}
                         value={this.state.repositoryInput}
                         onChange={e =>
-                            this.setState({ repositoryInput: e.target.value })
+                            this.setState({
+                                repositoryInput: e.target.value,
+                                msgError: {
+                                    msg: "",
+                                    show: false
+                                }
+                            })
                         }
                     />
 
